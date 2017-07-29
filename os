@@ -6,7 +6,7 @@ local i = 1
 repeat
   functions.cs()
   functions.setp(1, 1)
-  print("K-OS BETA CL-EDITION")
+  print("K-OS BETA 1.3 CL-EDITION")
   write("> ")
   local comin = read()
   if comin == "cyan" then
@@ -35,7 +35,7 @@ repeat
     end
     os.sleep(1)
   elseif comin == "whatsnew.exe" then
-    print("What's new: \n*Added Whats New command. \n*Added Help command. \n*Added booting screen. \n*And many more...")
+    print("What's new in 1.3: \n*Added Whats New version identification. \n*Added version No. to Main Screen. \n*Added function to Update OS")
     while true do
       print("Press E to Exit.")
       local event, key = os.pullEvent("key")
