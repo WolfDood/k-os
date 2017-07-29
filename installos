@@ -1,8 +1,9 @@
 print("K-OS Installer Wizard.")
 os.sleep(1)
+print("Please note: Advanced Computers are nessesary as they have requiremnets needed.")
 print("Detecting System Files...")
 shell.run("disk/KOSverifysystem")
-os.sleep(2)
+os.sleep(3.4)
 if fs.exists("KOSverifysystem") then
   print("Another version of K-OS detected. \nReplacing files for update...")
 print("Installing Functions... Please Wait...")
@@ -13,6 +14,8 @@ fs.copy("disk/functions", "functions")
 os.sleep(1.5)
 print("Copying OS Files... Please Wait...")
 if fs.exists("tempos") then
+  os.sleep(1.4)
+  print("Older version detected. Upgrading... Please Wait...")
   fs.delete("tempos")
 else end
 fs.copy("disk/os", "tempos")
@@ -47,9 +50,10 @@ if fs.exists("startup") then
   fs.delete("startup")
 else end
 fs.move("tempos", "startup")
+fs.delete("tempos")
 os.sleep(2)
 print("Have fun with your new copy of K-OS")
-os.sleep(2)
+os.sleep(2.2)
 term.clear()
 term.setCursorPos(1,1)
 print("Booting in 3...")
