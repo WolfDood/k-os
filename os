@@ -6,7 +6,7 @@ local i = 1
 repeat
   functions.cs()
   functions.setp(1, 1)
-  print("K-OS BETA 1.4 CL-EDITION")
+  print("K-OS BETA 1.5 CL-EDITION")
   write("> ")
   local comin = read()
   if comin == "cyan" then
@@ -35,7 +35,7 @@ repeat
     end
     os.sleep(1)
   elseif comin == "whatsnew.exe" then
-    print("What's new in 1.4: \n*Added minor changes to installation. \n*Added credits.exe  \n*Adding function to downgrade OS in the future.")
+    print("What's new in 1.5: \n*Added \n*Added \n*Adding function to downgrade OS in the future.")
     while true do
       print("Press E to Exit.")
       local event, key = os.pullEvent("key")
@@ -50,6 +50,20 @@ repeat
   elseif comin == "system.exe" then
     shell.run("KOSverifysystem")
     os.sleep(2.6)
+  elseif comin == "uninstallos.exe" then
+    write("To confirm this, type Confirm. If not type anything else.")
+    confirm = read()
+    if confirm == "Confirm" then
+      print("Deleting functions script...")
+      os.sleep(1)
+      fs.delete("functions")
+      print("Deleting files...")
+      fs.delete("advcalc")
+      fs.delete("calc")
+      os.sleep(3)
+      fs.move("startup", "osbin")
+      print("K-OS has been compressed and moved to osbin. To get K-OS back run osbin.")
+      os.sleep(2)
   else print("Couldn't process request. E1")
   os.sleep(0.8)
   functions.cs()
