@@ -20,7 +20,7 @@ os.sleep(1.9)
 if fs.exists("startup") then
   fs.delete("startup")
 else print("Making final Adjustments... Please Wait...")
-fs.copy("disk/KOSverifysystem", "KOSverifysystem")
+fs.copy("KOSverifysystem", "KOSverifysystem")
 fs.move("tempos", "startup")
 os.sleep(2)
 print("Have fun with your new copy of K-OS")

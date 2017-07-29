@@ -20,10 +20,30 @@ repeat
     functions.cs()
     functions.setp(1, 1)
     shell.run("advcalc")
-  elseif comin == "help" or "help.exe" or "/help" then
+  elseif comin == "help.exe" then
+    print("Try some of these.")
     for _, file in ipairs(FileList) do
       print(file)
     end
+    print("If they don't work then try adding .exe at the end")
+    while true do
+      print("Press E to Exit.")
+      local event, key = os.pullEvent("key")
+      if key == keys.e then
+        break
+      end
+    end
+    os.sleep(1)
+  elseif comin == "whatsnew.exe" then
+    print("What's new: \n*Added Whats New command. \n*Added Help command. \n*Added booting screen. \n*And many more...")
+    while true do
+      print("Press E to Exit.")
+      local event, key = os.pullEvent("key")
+      if key == keys.e then
+        break
+      end
+    end
+    os.sleep(1)
   else print("Couldn't process request. E1")
   os.sleep(0.9)
   functions.cs()
