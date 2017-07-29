@@ -1,0 +1,6 @@
+cs()
+setp(1,1)
+slowwr("Hello")
+setp(2,2)
+RandomNumber(21,69)
+

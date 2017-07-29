@@ -1,0 +1,16 @@
+function setp(arg1, arg2)
+  term.setCursorPos(arg1, arg2)
+end
+
+function cs()
+  term.clear()
+end
+
+function slowwr(Str)
+  textutils.slowWrite(Str)
+end
+
+function RandomNumber(no1, no2)
+  local rand = math.random(no1, no2)
+  return rand
+end 

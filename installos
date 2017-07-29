@@ -1,0 +1,26 @@
+print("Installing Functions... Please Wait...")
+fs.copy("disk/functions", "functions")
+os.sleep(1.5)
+print("Copying OS Files... Please Wait...")
+fs.copy("disk/os", "tempos")
+os.sleep(5)
+print("Installing Programs... Please Wait...")
+fs.copy("disk/calculator", "calculator")
+fs.copy("disk/advcalc", "advcalc")
+os.sleep(0.5)
+print("Merging directories... Please Wait...")
+os.sleep(2)
+print("Making these new files.")
+local FileList = fs.list("")
+
+for _, file in ipairs(FileList) do
+  print(file)
+end
+os.sleep(1.9)
+if fs.exists("startup") then
+  fs.delete("startup")
+else print("Making final Adjustments... Please Wait...")
+os.sleep(2)
+fs.copy("disk/KOSverifysystem","KOSverifysystem")
+print("In this BETA version startup by running tempos")
+end
