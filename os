@@ -6,7 +6,7 @@ local i = 1
 repeat
   functions.cs()
   functions.setp(1, 1)
-  print("K-OS BETA 1.3 CL-EDITION")
+  print("K-OS BETA 1.4 CL-EDITION")
   write("> ")
   local comin = read()
   if comin == "cyan" then
@@ -35,7 +35,7 @@ repeat
     end
     os.sleep(1)
   elseif comin == "whatsnew.exe" then
-    print("What's new in 1.3: \n*Added Whats New version identification. \n*Added version No. to Main Screen. \n*Added function to Update OS")
+    print("What's new in 1.4: \n*Added minor changes to installation. \n*Added credits.exe  \n*Adding function to downgrade OS in the future.")
     while true do
       print("Press E to Exit.")
       local event, key = os.pullEvent("key")
@@ -44,9 +44,16 @@ repeat
       end
     end
     os.sleep(1)
+  elseif comin == "credits.exe" then
+    print("Credits: \nOS Creator: Kaution2000 \nAdvCalc & Calc are not mine. \nRights reserved to owners of programs I may haved\nused.")
+    os.sleep(5)
+  elseif comin == "system.exe" then
+    shell.run("KOSverifysystem")
+    os.sleep(2.6)
   else print("Couldn't process request. E1")
-  os.sleep(0.9)
+  os.sleep(0.8)
   functions.cs()
   functions.setp(1, 1)
+  os.sleep(2)
 end
 until i == 2
