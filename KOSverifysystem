@@ -1,1 +1,4 @@
-print("Out of date system")
+print("--KOS Version: BETA 1.3 Command Line Edition")
+print("--Signed by KB Industries")
+print("--Tag No.: ", math.random(2169481))
+
