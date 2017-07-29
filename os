@@ -1,6 +1,7 @@
 os.loadAPI("functions")
 functions.cs()
 functions.setp(1, 1)
+local FileList = fs.list("")
 local i = 1
 repeat
   functions.cs()
@@ -19,6 +20,10 @@ repeat
     functions.cs()
     functions.setp(1, 1)
     shell.run("advcalc")
+  elseif comin == "help" or "help.exe" or "/help" then
+    for _, file in ipairs(FileList) do
+      print(file)
+    end
   else print("Couldn't process request. E1")
   os.sleep(0.9)
   functions.cs()
